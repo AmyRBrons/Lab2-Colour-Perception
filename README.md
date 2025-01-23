@@ -1,161 +1,208 @@
 # Lab 2 - Colour and Perception
-*_Peter Cheung, version 1.0, 24 Jan 2024_*
-
-This lab session has two parts. In the first part, you will experiment with various physiological and psychological phenomenons related to your vision, colour perception and how the brain makes up missing visual information.  In the second part, you will explore how colour images are separated into different colour spaces.
-
-Clone this repo to your laptop and do all your work using your local copy.
 
 ---
 ## Part 1 - Seeing Colours and Shapes
 ---
 
 ### Task 1 - Find your blind spot
-
-Play the video [here](http://www.ee.ic.ac.uk/pcheung/teaching/DE4_DVS/assets/blind_spot_test.mp4) and follow its instructions.  Make notes on what you found out.
-
-<video src="assets/blind_spot_test.mp4" width="480" height="360" controls></video>
+From watching and interacting with this video I was able to identify my blind spot.
+I was shocked to see how my blindspot was engaged especially when I became unable to see symbols, which were replaced with the colour red.
 
 ### Task 2 - Ishihara Colour Test
-
-The Ishihara test is a colour vision test designed to detect deficiencies in the long and medium cones.  It consists of one set of pictures containing colour dots with a number embedded within.  Your goal is to identify the number you see in each of them.
-
-You can start the test [here](Ishihara_test.md).
+Although the last plate was difficult for me, I correctly identified all numbers.
 
 ### Task 3 - Reverse colour
-
-1. Get hold of a white sheet of paper and hold it up next to your screen.  
-2. Now stare at white dot in the centre of the American flag in funny colours shown below for 10 seconds or more.  
-3. Suddenly switch your gaze to the white sheet of paper.
-
-You should see the American flag in the normal red, white and blue colours.
-
-<p align="center"> <img src="assets/american_flag.jpg" /> </p><BR>
-
-Explain the reasons why this happens.
+This occured because my cone cells become fatigued and overstimulated. This leads to a negative after image impression. 
 
 ### Task 4 - Troxler's Fading
+Troxler's fading occurs becaise the neurons behind rods and cones have large receptive fields, meaning the small involuntary eye movements when fixating on something fail to move the stimulus onto a new cell's receptive field. This effect is attributed to the adaption of neurons.
 
-Here is another example to demonstrate the Opponent Process Theory.  Play the video [here](http://www.ee.ic.ac.uk/pcheung/teaching/DE4_DVS/assets/purple_dots.mp4) and follow the instruction.  
-
-<video src="assets/purple_dots.mp4" width="640" height="320" controls></video>
-
-Write down in your logbook the reason of what you see.  Read the wikipedia page on Troxler's fading [here](https://en.wikipedia.org/wiki/Troxler%27s_fading), which explains this phenomenon and relates it to the human visual system.
-
-[Here](http://www.ee.ic.ac.uk/pcheung/teaching/DE4_DVS/assets/blue_circle.mp4) is another experiment to test the phenomenon.  Play the video and comment.
-
-<video src="assets/blue_circle.mp4" width="640" height="320" controls></video>
+The first video I was able to see the purple circles "mopped up" by the green.
+The second video I was able to see the blue ring disappear.
 
 ### Task 5 - Brain sees what it expects
+The tables are the same size, but because we expect the tables to be different sizes, that is what we see. This is because we decode them according to the rules for three-dimensional objects.
 
-Our brain interprets what we see based on our expectation.  Here is an example.  The image below shows two tables with blue and red tops.  Which is the longer table?  Measure this on the screen with a ruler (or just marking on a sheet of paper).  Write in your logbook the reason for this phenomenon.
+A and B are the same colour. See here:
+<p align = "centre"><img src="assets/Verification.png"/></p><BR>
 
-<p align="center"> <img src="assets/table.jpg" /> </p><BR>
-
-Here is another example, where our brain see what it expects instead of what hits the retina.  Which square is darker, the one labelled A or B?  Why?
-
-<p align="center"> <img src="assets/shadow.jpg" /> </p><BR>
-
-To verify the result, you need to use an image editor app and cut out one square and put it next to the other for comparison.
+This is because we have a visual expectation of what the colour would be based on the precident set in the rest of the image, implying that the shades would be different. 
 
 ### Task 6 - The Grid Illusion
-
-When you stare at the centre of the grid below, you should see black dots at the intersection appearing and disappearing.  You can read more about it [here](https://en.wikipedia.org/wiki/Grid_illusion).
-
-<p align="center"> <img src="assets/grid.jpg" /> </p><BR>
+This illusion is called a scintillating grid illusion. This is when dark dots seem to appear and disappear rapidly at random intersections. The effect is often explained by lateral inhibition, where a group of receptors respond to the presentation of stimuni in the receptive feild. Another theory is retinal ganglion cell theory, but is found untenable when making the grid wavy. There is a new hypothesis also, involving the blindspot.
 
 ### Task 7 - Cafe Wall Illusion
-
-Do you see the following brick wall layers are parallel?  Then measure the boundaries of each layer with a ruler.
-
-<p align="center"> <img src="assets/bricks.jpg" /> </p><BR>
-
-This phenomenon is not observed for the following image when the contrast is lower.
-
-<p align="center"> <img src="assets/cbricks.jpg" /> </p><BR>
-
-You can find out more about this [here](https://en.wikipedia.org/wiki/Café_wall_illusion).
-
+This is largely attributed to an irradiation illusion. This is when contrast are the determining factor in the tilt's direction.
 
 ### Task 8 - the Silhouette Illusion
-
-[Here](http://www.ee.ic.ac.uk/pcheung/teaching/DE4_DVS/assets/dancer.m4v) is video of a spinning dancer.  Play the video and looking at it for some time, you may find that the dance would suddenly spinning in the opposite direction.  The explanation for this phenomenon can be found [here](https://en.wikipedia.org/wiki/Spinning_dancer).
-
-<video src="assets/dancer.m4v" width="640" height="640" controls></video>
+This illusion cmes from lack of visual information about the depth of the image. The lack of visual cues gives this illusion ambiguity.
 
 ### Task 9 - the Incomplete Triangles
-
-The last task in part 1 is to consider the picture below.  How many triangles are in the picture?  What conclusions can you draw from this observation?
-
-<p align="center"> <img src="assets/triangle.jpg" /> </p><BR>
+This illusion evokes our expectaition of shape, and defines a form without lines by making us complete the shape.
 
 ---
 ## Part 2 - Exploring Colours in Matlab
 ---
 
-In the second part of Lab 2, you will import a full colour image from a file and map this to various colour spaces.  You will then examine what each of the components (or channels) in these colour spaces.  
-
 ### Task 10 - Convert RGB image to Grayscale
 
-Although full colour images contain more information than grayscale images, we often find that they contain too much information and require unnecessary calculations. Instead it may be better to turn the colour image into a grayscale image before we perform various processing such as feature extraction.
-
-Run Matlab and navigate the current working folder to the matlab folder of Lab 2.  (You do this with the icon ![Alt text](assets/cwf_icon.jpg) at the top left of the Matlab window).  The photo **peppers.png** is already stored in this folder.  Find out information about this photo file with **imfinfo( )**:
+Input
 ```
 imfinfo('peppers.png')
 ```
-Matlab will return some information about this image file such as its size and the format of the image data.
 
-Read the image data into the array RGB and display it:(*_Remember to add the semicolon at the end of the imread statement to suppress printing of all the image data read._*)
+Output
+```
+ans = 
+
+  struct with fields:
+
+                  Filename: '/Users/AmyBrons/Documents/GitHub/Lab2-Colour-Perception/matlab/peppers.png'
+               FileModDate: '23-Jan-2025 14:06:39'
+                  FileSize: 711722
+                    Format: 'png'
+             FormatVersion: []
+                     Width: 777
+                    Height: 584
+                  BitDepth: 24
+                 ColorType: 'truecolor'
+           FormatSignature: [1×8 double]
+                  Colormap: []
+                 Histogram: []
+             InterlaceType: 'none'
+              Transparency: 'alpha'
+    SimpleTransparencyData: []
+           BackgroundColor: []
+           RenderingIntent: []
+            Chromaticities: []
+                     Gamma: []
+               XResolution: []
+               YResolution: []
+            ResolutionUnit: []
+                   XOffset: []
+                   YOffset: []
+                OffsetUnit: []
+           SignificantBits: []
+              ImageModTime: []
+                     Title: []
+                    Author: []
+               Description: []
+                 Copyright: []
+              CreationTime: []
+                  Software: []
+                Disclaimer: []
+                   Warning: []
+                    Source: []
+                   Comment: []
+                 OtherText: {1×2 cell}
+         AutoOrientedWidth: 777
+        AutoOrientedHeight: 584
+```
+
+Input
 ```
 RGB = imread('peppers.png');  
 imshow(RGB)
 ```
-In this task, we will convert the RGB image into a grayscale image. The formula to perform this mapping is:
-```
-    I = 0.299 * R + 0.587 * G + 0.114 * B 
-```
+Output
+<p align="center"><img src="assets/ColPepper.png"/></p>
 
-In matrix form, it is:
-
-<p align="center"> <img src="assets/grayscale_eq.jpg" /> </p>
-
-The function **rgb2gray( )** converts RGB values to grayscale values by forming a weighted sum of the R, G, and B components according to the equation above. 
-
+Input
 ```
 I = rgb2gray(RGB);
 figure              % start a new figure window
 imshow(I)
 ```
+Output
+<p align="center"><img src="assets/BWPepper.png"/></p>
 
-It would easier to compare the two photo if we display them side-by-side with **imshowpair( )** and add a title. This can be done with:
-
+Input
 ```
 imshowpair(RGB, I, 'montage')
 title('Original colour image (left) grayscale image (right)');
 ```
+Output
+<p align="centre"><img src="assets/MontagePepper.png"/></p>
+
 
 ### Task 11 - Splitting an RGB image into separate channels
 
-Split the image into its red, green, and blue channels with **imsplit( )**. Then display all three images side-by-side as a montage.
-
+Input
 ```
 [R,G,B] = imsplit(RGB);
 montage({R, G, B},'Size',[1 3])
 ```
+Output
+<p align="center"><img src ="assets/BWMontagePepper.png"/></p>
 
-Note the following: Red peppers have a signal predominantly in the red channel. Yellow and green peppers have a signal in both the red and green channels. White objects, such as the garlic in the foreground, have a strong signal in all three channels.
-
-Examine the information shown on the right side of the Matlab window. Explain their dimensions and data type of the variables RGB, R, G, B and I.
+R,G,B and I all have dimensions of 584X777 unit8. All of channels all contain different values in their matrices. 
 
 ### Task 12 - Map RGB image to HSV space and into separate channels
 
-Convert the RGB image to the HSV colorspace by using the **rgb2hsv( )** function.  Then split it into H, S and V components.
-
+Input
 ```
 HSV = rgb2hsv(RGB);
-[HSV] = imsplit(HSV);
-montage({H,S,V}, 'Size', [1 3]))
+[H,S,V] = imsplit(HSV);
+montage({H,S,V}, 'Size', [1 3])
 ```
+
+Output
+<p align="center"><img src="assets/HSV.png"/></p>
+
 
 ### Task 13 - Map RGB image to XYZ space
 
-Finally, map the RGB image to the XYZ colour space with the **rgb2xyz( )** function.  Examine what you get and comment.
+Input
+```
+XYZ = rgb2xyz(RGB);
+[X,Y,Z] = imsplit(XYZ);
+montage({X,Y,Z}, 'Size', [1 3])
+```
+
+Output
+<p align="center"><img src="assets/XYZ.png"/></p>
+
+Comments: 
+This
+
+FULL MATLAB CODE:
+
+```
+%___Task 10___
+
+%Image info
+imfinfo('peppers.png')
+
+%image shpw
+RGB = imread('peppers.png');  
+imshow(RGB)
+
+%convert to grey
+I = rgb2gray(RGB);
+figure              % start a new figure window
+imshow(I)
+
+%print pair side-by-side
+imshowpair(RGB, I, 'montage')
+title('Original colour image (left) grayscale image (right)')
+
+
+%___Task 11___
+
+%split RGB channels
+[R,G,B] = imsplit(RGB);
+montage({R, G, B},'Size',[1 3])
+
+%convert to HSV
+HSV = rgb2hsv(RGB);
+[H,S,V] = imsplit(HSV);
+montage({H,S,V}, 'Size', [1 3])
+
+%___Task 13___
+
+%map xyz
+XYZ = rgb2xyz(RGB);
+[X,Y,Z] = imsplit(XYZ);
+montage({X,Y,Z}, 'Size', [1 3])
+
+```
