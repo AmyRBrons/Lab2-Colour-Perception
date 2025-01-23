@@ -23,8 +23,8 @@ The second video I was able to see the blue ring disappear.
 ### Task 5 - Brain sees what it expects
 The tables are the same size, but because we expect the tables to be different sizes, that is what we see. This is because we decode them according to the rules for three-dimensional objects.
 
-A and B are the same colour. See here:
-<p align = "centre"><img src="assets/Verification.png"/></p><BR>
+A and B are the same colour. See here:<BR>
+<p align = "centre"><img src="assets/Verification.png" width ="300"/></p><BR>
 
 This is because we have a visual expectation of what the colour would be based on the precident set in the rest of the image, implying that the shades would be different. 
 
@@ -104,8 +104,8 @@ Input
 RGB = imread('peppers.png');  
 imshow(RGB)
 ```
-Output
-<p align="center"><img src="assets/ColPepper.png"/></p>
+Output<BR>
+<p align="center"><img src="assets/ColPepper.png" width ="300"/></p><BR>
 
 Input
 ```
@@ -113,16 +113,16 @@ I = rgb2gray(RGB);
 figure              % start a new figure window
 imshow(I)
 ```
-Output
-<p align="center"><img src="assets/BWPepper.png"/></p>
+Output<BR>
+<p align="center"><img src="assets/BWPepper.png" width ="300"/></p><BR>
 
 Input
 ```
 imshowpair(RGB, I, 'montage')
 title('Original colour image (left) grayscale image (right)');
 ```
-Output
-<p align="centre"><img src="assets/MontagePepper.png"/></p>
+Output<BR>
+<p align="centre"><img src="assets/MontagePepper.png" width="750"/></p><BR>
 
 
 ### Task 11 - Splitting an RGB image into separate channels
@@ -132,9 +132,9 @@ Input
 [R,G,B] = imsplit(RGB);
 montage({R, G, B},'Size',[1 3])
 ```
-Output
-<p align="center"><img src ="assets/BWMontagePepper.png"/></p>
-
+Output<BR>
+<p align="center"><img src ="assets/BWMontagePepper.png" width ="750"/></p>
+<BR>
 R,G,B and I all have dimensions of 584X777 unit8. All of channels all contain different values in their matrices. 
 
 ### Task 12 - Map RGB image to HSV space and into separate channels
@@ -146,8 +146,8 @@ HSV = rgb2hsv(RGB);
 montage({H,S,V}, 'Size', [1 3])
 ```
 
-Output
-<p align="center"><img src="assets/HSV.png"/></p>
+Output<BR>
+<p align="center"><img src="assets/HSV.png"/></p><BR>
 
 
 ### Task 13 - Map RGB image to XYZ space
@@ -159,11 +159,12 @@ XYZ = rgb2xyz(RGB);
 montage({X,Y,Z}, 'Size', [1 3])
 ```
 
-Output
-<p align="center"><img src="assets/XYZ.png"/></p>
+Output<BR>
+<p align = "center"><img src="assets/XYZTogether.png" width ="500"/></p><BR>
+<p align="center"><img src="assets/XYZ.png" width = "750"/></p><BR>
 
 Comments: 
-This
+This converts RGB values to CIE 1931 XYZ values. Together, the image looks faded. When apart these channels look grey.
 
 FULL MATLAB CODE:
 
