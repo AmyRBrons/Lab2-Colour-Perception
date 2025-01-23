@@ -160,7 +160,7 @@ montage({X,Y,Z}, 'Size', [1 3])
 ```
 
 Output<BR>
-
+<p align = "center"><img src="assets/XYZTogether.png" width ="500"/></p><BR>
 <p align="center"><img src="assets/XYZ.png" width = "750"/></p><BR>
 
 Comments: 
