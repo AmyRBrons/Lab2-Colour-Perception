@@ -1,6 +1,7 @@
 # Lab 2 - Colour and Perception
+## Amy Brons - Design of Visual Systems
+Below is the logbook for Lab 2, and the full MATLAB code for this lab can be found in attached MATLAB file.
 
----
 ## Part 1 - Seeing Colours and Shapes
 ---
 
@@ -40,11 +41,12 @@ This illusion cmes from lack of visual information about the depth of the image.
 ### Task 9 - the Incomplete Triangles
 This illusion evokes our expectaition of shape, and defines a form without lines by making us complete the shape.
 
----
+
 ## Part 2 - Exploring Colours in Matlab
 ---
 
 ### Task 10 - Convert RGB image to Grayscale
+Find out information about this photo file with imfinfo( ):
 
 Input
 ```
@@ -98,46 +100,58 @@ ans =
          AutoOrientedWidth: 777
         AutoOrientedHeight: 584
 ```
+Read the image data into the array RGB and display it:
 
 Input
 ```
-RGB = imread('peppers.png');  
+RGB = imread('assets/peppers.png');  
 imshow(RGB)
 ```
+
 Output<BR>
 <p align="center"><img src="assets/ColPepper.png" width ="300"/></p><BR>
+
+In this task, we will convert the RGB image into a grayscale image:
 
 Input
 ```
 I = rgb2gray(RGB);
-figure              % start a new figure window
+figure              
 imshow(I)
 ```
+
 Output<BR>
 <p align="center"><img src="assets/BWPepper.png" width ="300"/></p><BR>
+
+Compare the two photos side-by-side with imshowpair( ) and add a title:
 
 Input
 ```
 imshowpair(RGB, I, 'montage')
 title('Original colour image (left) grayscale image (right)');
 ```
+
 Output<BR>
 <p align="centre"><img src="assets/MontagePepper.png" width="750"/></p><BR>
 
 
 ### Task 11 - Splitting an RGB image into separate channels
+Split the image into its red, green, and blue channels with imsplit( ):
 
 Input
 ```
 [R,G,B] = imsplit(RGB);
 montage({R, G, B},'Size',[1 3])
 ```
+
 Output<BR>
 <p align="center"><img src ="assets/BWMontagePepper.png" width ="750"/></p>
 <BR>
+
 R,G,B and I all have dimensions of 584X777 unit8. All of channels all contain different values in their matrices. 
 
 ### Task 12 - Map RGB image to HSV space and into separate channels
+Convert the RGB image to the HSV colorspace by using the rgb2hsv( ) function:
 
 Input
 ```
@@ -151,59 +165,16 @@ Output<BR>
 
 
 ### Task 13 - Map RGB image to XYZ space
-
+Map the RGB image to the XYZ colour space with the rgb2xyz( ) function:
 Input
 ```
 XYZ = rgb2xyz(RGB);
 [X,Y,Z] = imsplit(XYZ);
 montage({X,Y,Z}, 'Size', [1 3])
 ```
-
-Output<BR>
+Output
 <p align = "center"><img src="assets/XYZTogether.png" width ="500"/></p><BR>
 <p align="center"><img src="assets/XYZ.png" width = "750"/></p><BR>
 
 Comments: 
 This converts RGB values to CIE 1931 XYZ values. Together, the image looks faded. When apart these channels look grey.
-
-FULL MATLAB CODE:
-
-```
-%___Task 10___
-
-%Image info
-imfinfo('peppers.png')
-
-%image shpw
-RGB = imread('peppers.png');  
-imshow(RGB)
-
-%convert to grey
-I = rgb2gray(RGB);
-figure              % start a new figure window
-imshow(I)
-
-%print pair side-by-side
-imshowpair(RGB, I, 'montage')
-title('Original colour image (left) grayscale image (right)')
-
-
-%___Task 11___
-
-%split RGB channels
-[R,G,B] = imsplit(RGB);
-montage({R, G, B},'Size',[1 3])
-
-%convert to HSV
-HSV = rgb2hsv(RGB);
-[H,S,V] = imsplit(HSV);
-montage({H,S,V}, 'Size', [1 3])
-
-%___Task 13___
-
-%map xyz
-XYZ = rgb2xyz(RGB);
-[X,Y,Z] = imsplit(XYZ);
-montage({X,Y,Z}, 'Size', [1 3])
-
-```

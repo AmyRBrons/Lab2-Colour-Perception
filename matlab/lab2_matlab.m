@@ -1,10 +1,10 @@
-%___Task 10___
+%Task 10: Convert RGB image to Grayscale
 
 %Image info
-imfinfo('peppers.png')
+imfinfo('assets/peppers.png')
 
 %image shpw
-RGB = imread('peppers.png');  
+RGB = imread('assets/peppers.png');  
 %imshow(RGB)
 
 %convert to grey
@@ -17,20 +17,17 @@ figure              % start a new figure window
 title('Original colour image (left) grayscale image (right)')
 
 
-%___Task 11___
-
+%Task 11: Splitting an RGB image into seperate channels
 %split RGB channels
 [R,G,B] = imsplit(RGB);
 %montage({R, G, B},'Size',[1 3])
 
-%convert to HSV
+%Task 12: Map RGB image to HSV space and into seperate channels
 HSV = rgb2hsv(RGB);
 [H,S,V] = imsplit(HSV);
 %montage({H,S,V}, 'Size', [1 3])
 
-%___Task 13___
-
-
+%Task 13: Map RGB image to XYZ space
 %map xyz
 XYZ = rgb2xyz(RGB);
 %imshow(XYZ)
