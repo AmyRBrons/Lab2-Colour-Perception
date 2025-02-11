@@ -7,10 +7,10 @@ Below is the logbook for Lab 2, and the full MATLAB code for this lab can be fou
 
 ### Task 1 - Find your blind spot
 From watching and interacting with this video I was able to identify my blind spot.
-I was shocked to see how my blindspot was engaged especially when I became unable to see symbols, which were replaced with the colour red.
+I was shocked to see how my blindspot was engaged especially when I became unable to see symbols, which were replaced with the colour red. I've always known about the blind spot theoretically, but actually experiencing it firsthand was surprising. Watching symbols completely disappear and be replaced by red really drove home how our brain is constantly filling in information for us.
 
 ### Task 2 - Ishihara Colour Test
-Although the last plate was difficult for me, I correctly identified all numbers.
+Although the last plate was difficult for me, I correctly identified all numbers. It's interesting to think about how many people might not see these the same way I do.
 
 ### Task 3 - Reverse colour
 This occured because my cone cells become fatigued and overstimulated. This leads to a negative after image impression. 
@@ -27,7 +27,7 @@ The tables are the same size, but because we expect the tables to be different s
 A and B are the same colour. See here:<BR>
 <p align = "centre"><img src="assets/Verification.png" width ="300"/></p><BR>
 
-This is because we have a visual expectation of what the colour would be based on the precident set in the rest of the image, implying that the shades would be different. 
+This is because we have a visual expectation of what the colour would be based on the precident set in the rest of the image, implying that the shades would be different.  Our brain has evolved to automatically compensate for shadows. Even knowing that squares A and B are identical, my visual system refuses to accept it because it's trying to account for the shadow cast by the cylinder. 
 
 ### Task 6 - The Grid Illusion
 This illusion is called a scintillating grid illusion. This is when dark dots seem to appear and disappear rapidly at random intersections. The effect is often explained by lateral inhibition, where a group of receptors respond to the presentation of stimuni in the receptive feild. Another theory is retinal ganglion cell theory, but is found untenable when making the grid wavy. There is a new hypothesis also, involving the blindspot.
@@ -39,8 +39,7 @@ This is largely attributed to an irradiation illusion. This is when contrast are
 This illusion cmes from lack of visual information about the depth of the image. The lack of visual cues gives this illusion ambiguity.
 
 ### Task 9 - the Incomplete Triangles
-This illusion evokes our expectaition of shape, and defines a form without lines by making us complete the shape.
-
+This illusion evokes our expectation of shape and defines a form without lines by making us complete the shape. It really demonstrates how our visual system is always trying to make sense of patterns and complete shapes, even when they're not actually there.
 
 ## Part 2 - Exploring Colours in Matlab
 ---
